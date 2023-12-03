@@ -3,15 +3,13 @@ import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN
 
-from helloworld.services.helloService import HelloService
-from helloworld.services.router import Routes
+from helloworld.services.router import Routes, Router
 
 
 class Menu:
     @inject
-    def __init__(self, router, hello_service: HelloService):
-        self.router = router
-        hello_service.sayHello()
+    def __init__(self, router_service: Router):
+        self.router = router_service
 
     def navigateToExercise(self, widget):
         self.router.go(Routes.EXERCISES)

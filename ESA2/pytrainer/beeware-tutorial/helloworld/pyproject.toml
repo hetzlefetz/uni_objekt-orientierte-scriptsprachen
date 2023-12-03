@@ -22,7 +22,8 @@ test_sources = [
 ]
 
 requires = [
-    "httpx"
+    "kink",
+    "peewee"
 ]
 test_requires = [
     "pytest",

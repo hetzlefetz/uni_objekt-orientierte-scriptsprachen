@@ -3,8 +3,9 @@ from toga.style import Pack
 from toga.style.pack import COLUMN
 from kink import inject
 
-from helloworld.services.helloService import HelloService
-from helloworld.services.routes import Routes
+
+from helloworld.services.router import Router, Routes
+from helloworld.models.exercise import Exercise
 
 
 class Exercises:
@@ -15,26 +16,33 @@ class Exercises:
         self.router.go(Routes.MENU)
 
     @inject
-    def __init__(self, router, hello_service: HelloService) -> None:
-        self.router = router
-        hello_service.sayHello()
+    def __init__(self, router_service: Router) -> None:
+        self.router = router_service
+        self.exercises = []
+        for u in Exercise.select():
+            self.exercises.append({"name": u.name})
 
     def getContent(self) -> toga.Box:
         main_box = toga.Box(style=Pack(direction=COLUMN))
-        label = toga.Label("Hello from Exercises")
+        label = toga.Label("Available Exercises", style=Pack(padding=5))
+        main_box.add(label)
 
-        create = toga.Button(
+        for e in self.exercises:
+            main_box.add(toga.Label(f"Name: {e['name']}"))
+            main_box.add(toga.Divider())
+
+        btn_create = toga.Button(
             "Exercises Create",
             on_press=self.navigateToExerciseCreate,
             style=Pack(padding=5),
         )
-        back = toga.Button(
+
+        btn_back = toga.Button(
             "Back", on_press=self.navigateBack, style=Pack(padding=5)
         )
 
-        main_box.add(label)
-        main_box.add(create)
-        main_box.add(back)
+        main_box.add(btn_create)
+        main_box.add(btn_back)
 
         return main_box
 

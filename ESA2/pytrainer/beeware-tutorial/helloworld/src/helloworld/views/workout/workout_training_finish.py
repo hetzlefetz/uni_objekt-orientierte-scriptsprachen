@@ -3,22 +3,20 @@ from toga.style import Pack
 from toga.style.pack import COLUMN
 from kink import inject
 
-from helloworld.services.helloService import HelloService
-from helloworld.services.routes import Routes
+from helloworld.services.router import Router, Routes
 
 
-class WorkoutTrainingDetail:
+class WorkoutTrainingFinished:
     def navigateBack(self, widget):
-        self.router.go(Routes.WORKOUT_TRAINING)
+        self.router.go(Routes.MENU)
 
     @inject
-    def __init__(self, router, hello_service: HelloService) -> None:
-        self.router = router
-        hello_service.sayHello()
+    def __init__(self, router_service: Router) -> None:
+        self.router = router_service
 
     def getContent(self) -> toga.Box:
         main_box = toga.Box(style=Pack(direction=COLUMN))
-        label = toga.Label("Hello from Workout Training Detail")
+        label = toga.Label("Congratulations you finished your training")
         back = toga.Button(
             "Back", on_press=self.navigateBack, style=Pack(padding=5)
         )
@@ -27,4 +25,4 @@ class WorkoutTrainingDetail:
         return main_box
 
     def getName(self) -> str:
-        return "Workout Training Detail"
+        return "Workout Training Finished"
