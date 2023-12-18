@@ -150,3 +150,28 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+ESA2/pytrainer/beeware-tutorial/beeware-venv/pyvenv.cfg
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/activate
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/activate.bat
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/Activate.ps1
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/briefcase.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/chardetect.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/cookiecutter.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/deactivate.bat
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/httpx.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/markdown-it.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/normalizer.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pip.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pip3.11.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pip3.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pwiz.py
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/py.test.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pygmentize.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pyproject-build.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pytest.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/python.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/pythonw.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/slugify.exe
+ESA2/pytrainer/beeware-tutorial/beeware-venv/Scripts/wheel.exe
+Semesterprojekt/PROPOSAL.md
+Semesterprojekt/PROPOSAL.pdf
